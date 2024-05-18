@@ -2,6 +2,10 @@
   
   ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/aba46b0f-21cd-4c86-9da0-bff1925407fe)
 
+### Architecture Diagram
+  
+  ![Build Gemini Application drawio](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/71745ca2-96cd-4934-b7be-a036bdbe2c51)
+
 ### Create a new bucket
 - Give a name for this bucket. In this case `test-bucket-111111111`. If you use other name of the bucket, make sure to change the name in this loction of this code in `app.py`
 
