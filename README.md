@@ -142,5 +142,24 @@
 
   ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/055ba954-5e56-41ef-96d9-ddc420ec8b81)
 
+### Setup build trigger with cloud build
+- Click on `Create Service`
+- Select option `Continuously deploy from a repository` and click on `Set up with cloud build`
 
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/031e9789-93a7-4ef0-9569-7ba6b404ef31)
+
+- Choose your repository that include applition code
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/a2dfcc24-1f68-45dc-a9df-c1f473a0a540)
+
+- Select branch and specify Dockerfile and click on `Save`
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/10c90be8-00f7-40c8-a4c8-7f62d34fc1bc)
+
+- Make sure to change port `5000` and click on `Create` 
+
+
+
+
+  
   
