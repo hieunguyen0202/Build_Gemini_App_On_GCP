@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prompt Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* changed to min-height to maintain top margin */
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff; /* Background color for the top bar */
+            padding: 10px; /* Adjust padding as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a raised effect */
+            z-index: 1000; /* Ensure the top bar is above other content */
+        }
+        .logo-container {
+            display: flex;
+           
+            justify-content: center; /* Center the logos horizontally */
+            align-items: center; /* Center the logos vertically */
+            
+        }
+        .logo {
+            margin-right: 20px; /* Adjust the margin-right for spacing */
+        }
+        h1 {
+            color: #3771e4;
+            margin-right: 270px;
+            margin-left: 260px;
+          /* added margin-top to maintain space above the title */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px; /* Adjust max-width as needed */
+            margin: 20px auto 0; /* adjusted margin to include top margin */
+            padding: 20px;
+        }
+        .form-container {
+            flex: 1;
+            margin-right: 20px; /* Adjust spacing between form and result */
+        }
+        .result-container {
+            flex: 1;
+            margin-left: 20px; /* Adjust spacing between form and result */
+        }
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="file"],
+        input[type="text"],
+        input[type="submit"] {
+            width: calc(100% - 24px); /* Adjust for padding */
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+        input[type="submit"] {
+            background-color: #5a67d8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #434190;
+        }
+        #result {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        #result h2 {
+            color: #48bb78;
+        }
+        #result p {
+            font-size: 18px;
+        }
+        #result img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+    <div class="logo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_Cloud_logo.svg/1200px-Google_Cloud_logo.svg.png" alt="Google Cloud Logo" class="logo" width="240">
+        <h1>Welcome to Gemini App</h1>
+        <img src="https://training.cloud-ace.vn/wp-content/uploads/2021/08/logo.png" alt="Google Cloud Logo" class="logo" width="200">
+    </div>
+    </div>
+
+
+  
+    <div class="container">
+        
+        <div class="form-container">
+            <form action="/generate" method="post" enctype="multipart/form-data">
+                <label for="image">Select image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <label for="prompt">Enter prompt:</label>
+                <input type="text" id="prompt" name="prompt" required>
+                <input type="submit" value="Generate">
+            </form>
+        </div>
+        <div class="result-container">
+            <div id="result">
+                {% if result %}
+                    <h2>Result:</h2>
+                    <p>{{ result }}</p>
+                {% endif %}
+                {% if uploaded_image %}
+                    <img src="{{ uploaded_image }}" alt="Uploaded Image" width="200" height="100">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

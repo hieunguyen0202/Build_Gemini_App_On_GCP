@@ -1,0 +1,5 @@
+Flask
+Werkzeug
+vertexai
+google-cloud-storage
+google-auth
