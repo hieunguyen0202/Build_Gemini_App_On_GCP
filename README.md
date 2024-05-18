@@ -1,5 +1,5 @@
 # Build_Gemini_App_On_GCP
-## Prerequisite step
+
 ### Create a new bucket
 - Give a name for this bucket. In this case `test-bucket-111111111`. If you use other name of the bucket, make sure to change the name in this loction of this code in `app.py`
 
@@ -103,3 +103,38 @@
   ```
 
 ### Deploy Gemini application image on Cloud Run 
+- Click on `Create service` on Cloud Run console
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/eba53ecc-dfd3-4392-bbb1-3262bdbc4c79)
+
+- Click on `Select`
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/19933fd0-b091-4d38-8b39-660d61806af5)
+
+- You need to choose this lastest container image
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/df94f9a0-e81a-4518-bcad-b8c66f436991)
+
+- Next, change the port is `5000`
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/ca03fb33-2fbc-44f0-92be-2205b872ed6b)
+
+- Click on `Create` and wait for mininutes for deploying application
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/99959321-cbed-4e8c-8e6f-919cbdda6ef7)
+
+- Click on this end-point URL for this Gemini Application
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/d97cb152-cc17-4179-9fac-5f8d12ec39cd)
+
+### Test Gemini Application
+- Upload `elephant` image and type the prompt `Describe this image` and click on `Generate`
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/d71cd1ae-d275-49e4-af0e-0a9d61a10317)
+
+- Similarly, test other image
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/055ba954-5e56-41ef-96d9-ddc420ec8b81)
+
+
+  
