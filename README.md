@@ -28,3 +28,34 @@
 
   ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/e82d3051-3afa-485f-9c0c-a35b77e6c3f4)
 
+### Prepare the source code for application
+- Go to Google Cloud Console and open Cloud Shell, make sure to create new project and set project ID for this cloud shell
+
+  ```
+  gcloud config set project [project_ID] 
+  ```
+
+- On cloud shell, type this command
+
+  ```
+  git clone https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP.git
+  ```
+
+- Enable `Cloud Shell Editor` on Cloud Shell and open the foler `Build_Gemini_App_On_GCP`
+
+### Run the applciation
+- On cloud shell, run this command to install all dependencies of this application
+
+  ```
+  pip install -r requirements.txt
+  ```
+
+- Next, run this command
+
+  ```
+  python app.py
+  ```
+
+- You will see the applition
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/01ad37aa-b2a8-4e14-98b8-0730fe2c7ed8)
