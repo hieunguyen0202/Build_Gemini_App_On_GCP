@@ -1,4 +1,6 @@
-# Build_Gemini_App_On_GCP
+# Build Gemini Application on Google Cloud Platform with Cloud Run
+  
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/aba46b0f-21cd-4c86-9da0-bff1925407fe)
 
 ### Create a new bucket
 - Give a name for this bucket. In this case `test-bucket-111111111`. If you use other name of the bucket, make sure to change the name in this loction of this code in `app.py`
