@@ -59,3 +59,47 @@
 - You will see the applition
 
   ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/01ad37aa-b2a8-4e14-98b8-0730fe2c7ed8)
+
+### Create Artifact Registry on GCP
+- Click on `Create repository`
+
+  ![image](https://github.com/hieunguyen0202/Build_Gemini_App_On_GCP/assets/98166568/6e61923b-baa6-4d80-9612-f49b031e0b52)
+
+- Type a name `my-repo`, everything by default
+
+### Build container image for this Gemini application
+- Go back to Cloud shell, type `docker iamges` to check status
+- Check `Dockerfile` and run this command to build new image from this Dockerfile
+
+  ```
+  docker build -t my-app .
+  ```
+
+- Check the status of the image
+
+  ```
+  docker images
+  ```
+
+- To run this container image, type this command. Note add `-d` option to run the back groumd 
+
+  ```
+  docker run -p 5000:5000 my-app
+  ```
+
+- Go to the URL and check the applition running
+
+### Upload the image to Artifact Registry
+- First, add tag for this image
+
+  ```
+  docker tag my-app us-central1-docker.pkg.dev/test-demo-423606/my-repo/my-app:v1
+  ```
+
+- Push the image on the repository
+
+  ```
+  docker push us-central1-docker.pkg.dev/test-demo-423606/my-repo/my-app:v1
+  ```
+
+### Deploy Gemini application image on Cloud Run 
